@@ -5,32 +5,31 @@ player1 = gets.chomp
 p 'Player2 type rock, paper or scissors'
 player2 = gets.chomp
 
-
 # rock, paper, scissors same input => "draw again"
 if player1.to_s == 'rock' && player2.to_s == 'rock' 
-     puts "it's a draw"
+     puts "it's a tie"
 elsif player1.to_s == 'scissors' && player2.to_s == 'scissors' 
-    puts "it's a draw"
+    puts "it's a tie"
 elsif player1.to_s == 'paper' && player2.to_s == 'paper' 
-    puts "it's a draw"
+    puts "it's a tie"
 
 ## paper beats rock
 elsif player1.to_s == 'paper' && player2.to_s == 'rock'
-    puts 'Player1 wins'
+    puts 'Paper better than rock, Player1 wins'
 elsif player1.to_s == 'rock' && player2.to_s == 'paper'
-    puts 'Player2 wins'
+    puts 'paper better than rock, Player2 wins'
 
 # scissors beats paper
 elsif player1.to_s == 'scissors' && player2.to_s == 'paper'
-    puts 'Player1 wins'
+    puts 'Scissors is better than paper, Player1 wins'
 elsif player1.to_s == 'paper' && player2.to_s == 'scissors'
-    puts 'Player2 wins'
+    puts 'Scissors is better than paper, Player2 wins'
 
 # paper beats rock 
 elsif player1.to_s == 'rock' && player2.to_s == 'scissors'
-    puts 'Player1 wins'
+    puts 'Rock is better than scissors, Player1 wins'
 elsif player1.to_s == 'scissors' && player2.to_s == 'rock'
-    puts 'Player2 wins'
+    puts 'Rock is better than scissors, Player2 wins'
 
 else
     puts "I didn't understand you. Please try again."
