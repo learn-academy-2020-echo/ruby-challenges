@@ -11,7 +11,7 @@ my_phone [:uber] = 'rideshare app'
 my_phone [:snapchat] = 'sending pictures to friends that go away after viewing'
 my_phone [:venmo] = 'sending money between accounts'
 
-# p my_phone
+# p my_phone   
 
 # As a developer, I can return a value from my_phone by passing in the name of a key.
 
