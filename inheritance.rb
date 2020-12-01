@@ -70,23 +70,13 @@ class Salmon < Fish
   end
   
   def get_salmon_info 
-   if @age == 4
+   if @age >= 4
       change_status
       "This salmon is not alive, but lived to the ripe old age of #{age} years old"
    else
       "This salmon is alive and is #{age} years old"
    end
   end
-
-  # def get_animal_info 
-  #   if @status == true 
-  #      "This animal is alive and is #{age} years old"
-  #   else 
-  #       "This animal is not alive, but it was #{age} years old when it died"
-  #   end
-  # end
-
-
 end
 
 salmon1 = Salmon.new "atlantic"
@@ -100,12 +90,17 @@ p salmon1.get_salmon_info
 
 
 
-
-
-
 # Story: As a developer, I can create a Mammal that inherits from Animal.
 
 # Story: As a developer, I can initialize all of my Mammals to be warm_blooded.
+
+class Mammal < Animal
+  attr_accessor :warm_blooded
+  def initialize
+    super()
+    @warm_blooded = true
+  end
+end
 
 # Story: As a developer, I can create a Bear that inherits from Mammal.
 
@@ -115,8 +110,79 @@ p salmon1.get_salmon_info
 
 # Story: As a developer, if my Bear turns 20 years old, I can make it die peacefully after a full and happy life. Hint: You will need a method that changes the status of alive in the initialize method of Animal.
 
+class Bear < Mammal
+  def initialize ()
+    super()
+  end
+  
+  def get_bear_info 
+   if @age >= 20
+      change_status
+      "This bear is not alive, but died peacefully at the old age of #{age} years old"
+   else
+      "This bear is alive and is #{age} years old"
+   end
+  end
+end
+
+bear1 = Bear.new
+bear1.increase_age
+bear1.increase_age
+bear1.increase_age
+bear1.increase_age
+bear1.increase_age
+bear1.increase_age
+bear1.increase_age
+bear1.increase_age
+bear1.increase_age
+bear1.increase_age
+bear1.increase_age
+bear1.increase_age
+bear1.increase_age
+bear1.increase_age
+bear1.increase_age
+bear1.increase_age
+bear1.increase_age
+bear1.increase_age
+bear1.increase_age
+bear1.increase_age
+bear1.increase_age
+p bear1.increase_age
+p bear1.get_bear_info
+
 # Story: As a developer, I can create a Mammal of my choice.
 
 # Story: As a developer, I can interact with the new Mammal via various methods.
 
 # Story: As a developer, I can see a message that tells me all of my new Mammal's information.
+
+class Cat < Mammal
+  attr_accessor :lives
+  def initialize ()
+    super()
+    @lives = 9
+  end
+
+  def decrease_lives
+    if @lives >= 1
+    @lives -= 1
+    else 
+      change_status
+    end 
+  end
+
+  def get_cat_info 
+   if @status == false
+      "This cat has used all of his 9 lives. It lived to the age of #{age} years old"
+   else
+      "The cat is alive and is #{age} years old. The cat still has #{lives} lives"
+   end
+  end
+end
+
+cat1= Cat.new
+cat1.increase_age
+cat1.increase_age
+cat1.increase_age
+cat1.decrease_lives
+p cat1.get_cat_info
