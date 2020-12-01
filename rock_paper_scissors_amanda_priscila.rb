@@ -16,7 +16,7 @@ user_two_input = gets.chomp
 
 if user_one_input == user_two_input
   puts 'There was a tie'
-elsif user_one_input == 'rock' && user_two_input == 'scissors'
+elsif user_one_input == 'rock' && user_two_input == 'scissors' 
   puts "User one wins! #{user_one_input} beats #{user_two_input}"
 elsif user_two_input == 'rock' && user_one_input == 'scissors'
   puts "User two wins! #{user_two_input} beats #{user_one_input}"
