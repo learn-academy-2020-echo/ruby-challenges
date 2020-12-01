@@ -1,40 +1,33 @@
 
-class Animal 
+class Animal
+  attr_accessor :description, :alive, :age
      def initialize description
-        @description = @description
-        @alive = "true"
+        @description = description
         @age = 0
-     end
-     
-     def get_animal_info
-        @description
+        @alive = "yes"
      end
 
-     def aging 
-       @age = @age + 1
+     def aging
+        @age = @age + 1
      end
-end
 
-class Details < Animal
-    def initialize description
-        super (description)
-    end
+     def animal_info
+      "my animal is #{@description}, is #{@age} years old and its currently #{@alive}"
+     end
 
-    def get_details
-        @description
-    end
-end
+  end
 
 
 
-# anim1 = Animal.new  "test" 
-anim2 = Details.new ("dolphin" "test")
-p anim2.get_details
-p anim2.get_animal_info
 
-# p anim1
-# p anim1.aging
-# p anim1.get_animal_info
-# p anim1
-# p anim1.get_details
 
+
+# anim1 = Animal.new  "test"
+anim2 = Animal.new ("fish")
+# p anim2.aging
+# p anim2
+anim2.aging
+anim2.aging
+anim2.aging
+p anim2.animal_info
+# p animal_info
