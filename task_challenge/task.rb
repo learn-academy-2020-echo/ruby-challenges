@@ -24,8 +24,14 @@ class Task
     @status = status
     end
 
-    def update banana 
+    def update banana
      @status = banana
     end
+
+    def print_status
+      if @status == "done"
+        p "my task is done"
+
+
 
 end
