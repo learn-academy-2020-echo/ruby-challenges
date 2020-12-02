@@ -15,18 +15,16 @@ class Task
   end
 end
 
-task1 = Task.new("CodeChallenges", "Done!")
-task2 = Task.new("HoneyDoList", "In Progress")
-task3 = Task.new("GTL", "Done!")
+# task1 = Task.new("CodeChallenges", "Done!")
+# task2 = Task.new("HoneyDoList", "In Progress")
+# task3 = Task.new("GTL", "Done!")
 
-class Tasklist < Task
-  attr_accessor :title, :status, :task_list_array
-  def initialize(title, status)
-    super(title, status)
+class Tasklist
+  def initialize
     @task_list_array = []
   end
-    # def task_lister task
-    #   @task_list_array << task
-    #
-    # end
+    def task_lister task
+      @task_list_array << task
+
+    end
 end
