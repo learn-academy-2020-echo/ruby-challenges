@@ -1,16 +1,9 @@
-class Task
-  attr_accessor :title, :description, :status
-  def initialize status = 'in progress'
-    @title = title
-    @description = description
-    @status = status
+class TaskList
+  attr_accessor :task_collection
+  def initialize 
+    @task_collection = []
   end
-
-  def print_task
-   if @status == 'complete'
-    "The #{title} task is #{status}"
-   else
-    "#{title}: #{description}"
-   end
+  def add_task task 
+    @task_collection << task
   end
 end
